@@ -1,0 +1,27 @@
+
+<ejs-schedule #schedule width='100%' height='650px' 
+  [eventSettings]="eventSettings"
+  cssClass="quick-info-popup">
+  <e-views>
+    <e-view option='Week'></e-view>
+  </e-views>
+  <ng-template #quickInfoTemplatesHeader>
+    <div  class="e-popup-header">
+      <div class="e-header-icon-wrapper">
+        <button ejs-button class="e-close e-icons" title="close" (click)="onCloseClick()"></button>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #quickInfoTemplatesContent let-data>
+    <ejs-textbox id="subject" placeholder="Subject" value="{{data.Subject}}"></ejs-textbox>
+  </ng-template>
+  <ng-template #quickInfoTemplatesFooter let-data>
+    <div *ngIf="data.elementType == 'cell'">
+      <button ejs-button cssClass="e-flat" [isPrimary]="true" (click)="onBtnClk($event, 'Add')">Add</button>
+    </div>
+    <div *ngIf="data.elementType == 'event'">
+      <button ejs-button cssClass="e-flat" [isPrimary]="true" (click)="onBtnClk($event, 'Edit')">Save</button>
+      <button ejs-button cssClass="e-flat" [isPrimary]="true" (click)="onBtnClk($event, 'Delete')">Delete</button>
+    </div>
+  </ng-template>
+</ejs-schedule>

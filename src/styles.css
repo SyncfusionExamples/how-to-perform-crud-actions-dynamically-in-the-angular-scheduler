@@ -1,0 +1,18 @@
+@import '../node_modules/@syncfusion/ej2-material-theme/styles/material.css';
+/* You can add global styles to this file, and also import other style files */
+
+.quick-info-popup.e-schedule .e-quick-popup-wrapper .e-event-popup .e-popup-header {
+  background: #fff;
+}
+
+.quick-info-popup.e-schedule .e-quick-popup-wrapper .e-event-popup .e-popup-header .e-header-icon-wrapper .e-close {
+  color: black;
+}
+
+.quick-info-popup.e-schedule .e-quick-popup-wrapper .e-event-popup .e-popup-content {
+  padding: 8px 18px 8px 26px;
+}
+
+.quick-info-popup.e-schedule .e-quick-popup-wrapper .e-event-popup .e-popup-footer {
+  display: block;
+}
